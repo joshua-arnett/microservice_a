@@ -1,13 +1,15 @@
 # microservice_a
 
-My project:
+To request data from this microservice, write 1-2 dates and an NHL team code in the form "MM/DD/YYYY CODE" or "MM/DD/YYYY MM/DD/YYYY CODE" to a file named "user_input.txt". The microservice will then automatically receive this data and write all the available games in the date range in an output file named "output.txt".
 
-I’m developing a program which takes someone’s favorite (or just randomly selected) hockey team and then notifies them if there’s a game available to attend depending on the date and time they’re in a certain location. It will also provide transportation, weather and ticket price updates.
+Example data request:
+with open("user_input", "w") as f:
+  f.write("10/14/2024 10/20/2024 DET")
 
-I’m using a text-based python format to make it as simple as possible.
+Example data receiving:
+with open("output.txt", "r") as f:
+  games = f.read()
 
-At this stage I’m looking for a microservice which scrapes a given teams schedule and returns the date, time and location to match it against the user selection which for this is only a date range and preferred team. The program will then only notify the user that a match exists based on their location.
+UML sequence diagram:
 
-This would be followed, if the user selects to do more research with the current projected weather, ticket price and transportation costs. 
-
-Lastly, an update service if the costs or game start change.
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/27ee373c-a8cc-4900-be7e-3d0c12a506f3">
