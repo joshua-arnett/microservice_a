@@ -1,5 +1,8 @@
 # microservice_a
 
+This was a university assignment that required me to create a microservice for my classmate's NHL data app. This microservice takes as input a date or date range, as well as an NHL team code. The program will then write available games in the date range within an output file.
+
+MICROSERVICE USE:
 To request data from this microservice, write 1-2 dates and an NHL team code in the form "MM/DD/YYYY CODE" or "MM/DD/YYYY MM/DD/YYYY CODE" to a file named "user_input.txt". The microservice will then automatically receive this data and write all the available games in the date range in an output file named "output.txt".
 
 Example data request:
